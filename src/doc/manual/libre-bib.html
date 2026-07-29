@@ -12,6 +12,104 @@
   <hr />
   <h1 id="libre-bib-manual">Libre Bib Manual</h1>
   <hr />
+  <h2 id="toc">TOC</h2>
+  <ul>
+    <li>
+      <a href="#install-and-setup">Install and Setup</a>
+      <ul>
+        <li><a href="#o.s.-requirments">O.S. Requirments</a></li>
+        <li>
+          <a href="#install-package">Install Package</a>
+          <ul>
+            <li><a href="#required-packages">Required Packages</a></li>
+            <li><a href="#optional-packages">Optional Packages</a></li>
+            <li><a href="#required-packages-for-building">Required Packages
+            for Building</a></li>
+            <li><a href="#config">Config</a></li>
+          </ul>
+        </li>
+        <li><a href="#setup-libre-bib-project">Setup libre-bib
+        project</a></li>
+        <li>
+          <a href="#configure-the-db">Configure the DB</a>
+          <ul>
+            <li><a href="#install-and-test">Install and test</a></li>
+            <li><a href="#create-db-users-and-grants">Create DB, Users, and
+            Grants</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#configure-ssh">Configure ssh</a>
+          <ul>
+            <li><a href="#test-the-tunnel">Test the tunnel</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#using-libre-bib">Using libre-bib</a>
+      <ul>
+        <li><a href="#quick-start">Quick Start</a></li>
+        <li>
+          <a href="#libre-bib-tour">libre-bib Tour</a>
+          <ul>
+            <li><a href="#files-and-dirs">Files and Dirs</a></li>
+            <li><a href="#db-tables">DB Tables</a></li>
+            <li><a href="#annotated-conf.env">Annotated conf.env</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#commands">Commands</a>
+          <ul>
+            <li><a href="#cmd-setup-bib">Cmd: setup-bib</a></li>
+            <li><a href="#cmd-connect">Cmd: connect</a></li>
+            <li><a href="#cmd-check">Cmd: check</a></li>
+            <li><a href="#cmd-edit">Cmd: edit</a></li>
+            <li><a href="#cmd-import-lo">Cmd: import-lo</a></li>
+            <li><a href="#cmd-export-lo">Cmd: export-lo</a></li>
+            <li><a href="#cmd-backup-lo">Cmd: backup-lo</a></li>
+            <li><a href="#cmd-import-lib">Cmd: import-lib</a></li>
+            <li><a href="#cmd-update-lo">Cmd: update-lo</a></li>
+            <li><a href="#cmd-ref-new">Cmd: ref-new</a></li>
+            <li><a href="#cmd-ref-update">Cmd: ref-update</a></li>
+            <li><a href="#cmd-save-style">Cmd: save-style</a></li>
+            <li><a href="#cmd-update-style">Cmd: update-style</a></li>
+            <li><a href="#cmd-status">Cmd: status</a></li>
+            <li><a href="#cmd-clean">Cmd: clean</a></li>
+            <li><a href="#cmd-version">Cmd: version</a></li>
+            <li><a href="#cmd-add-edit">Cmd: add, edit</a></li>
+            <li><a href="#cmd-help">Cmd: help</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#appendix">Appendix</a>
+      <ul>
+        <li><a href="#a.-backups">A. Backups</a></li>
+        <li><a href="#b.-customizing-the-defaults">B. Customizing the
+        defaults</a></li>
+        <li><a href="#c.-emacs-org-mode%E2%80%94outine">C. Emacs Org Mode -
+        Outine</a></li>
+        <li><a href="#d.-full-example">D. Full Example</a></li>
+        <li><a href="#e.-build">E. Build</a></li>
+        <li>
+          <a href="#f.-maps">F. Maps</a>
+          <ul>
+            <li><a href="#bib-to-libreoffice-names">bib to libreoffice
+            names</a></li>
+            <li><a href="#lo-file-to-lo-table">lo-file to lo-table</a></li>
+            <li><a href="#lo-table-to-bib-table">lo-table to
+            bib-table</a></li>
+            <li><a href="#lib-table-to-lo-table">lib-table to
+            lo-table</a></li>
+          </ul>
+        </li>
+        <li><a href="#g.-support">G. Support</a></li>
+      </ul>
+    </li>
+  </ul>
+  <hr />
   <h1 id="install-and-setup">Install and Setup</h1>
   <hr />
   <h2 id="o.s.-requirments">O.S. Requirments</h2>
@@ -57,9 +155,7 @@
     </li>
     <li>
       <p>Packages can be found at: <a href=
-      "https://moria.whyayh.com/rel/released/software/own/libre-bib/"
-         class=
-         "uri">https://moria.whyayh.com/rel/released/software/own/libre-bib/</a></p>
+      "https://moria.whyayh.com/rel/released/software/own/libre-bib/">https://moria.whyayh.com/rel/released/software/own/libre-bib/</a></p>
     </li>
   </ul>
   <h3 id="required-packages">Required Packages</h3>
@@ -82,9 +178,7 @@
   <h3 id="optional-packages">Optional Packages</h3>
   <ul>
     <li>beekeeper - <a href=
-    "https://github.com/beekeeper-studio/beekeeper-studio"
-       class=
-       "uri">https://github.com/beekeeper-studio/beekeeper-studio</a></li>
+    "https://github.com/beekeeper-studio/beekeeper-studio">https://github.com/beekeeper-studio/beekeeper-studio</a></li>
     <li>pod2pdf</li>
   </ul>
   <h3 id="required-packages-for-building">Required Packages for Building</h3>
@@ -98,9 +192,9 @@
   <ul>
     <li>run libreoffice at least once before doing more with libre-bib</li>
     <li>edit the cli/php.ini file (for example: /etc/php/7.4/cli/php.ini)
-    Change the ="variables<sub>order</sub>"= to this:
+    Change the <code class="verbatim">"variables_order"</code> to this:
       <blockquote>
-        =variables<sub>order</sub> = "EGPCS"=
+        <code class="verbatim">variables_order = "EGPCS"</code>
       </blockquote>
     </li>
   </ul>
@@ -126,13 +220,12 @@
   <p>If you don't see it running, you'll need to consult the mariadb docs to
   get it running.</p>
   <ul>
-    <li><a href="https://opensource.com/article/20/10/mariadb-mysql-linux"
-       class=
-       "uri">https://opensource.com/article/20/10/mariadb-mysql-linux</a>
-       (alt: <a href="https://archive.ph/yhDHm"
-       class="uri">https://archive.ph/yhDHm</a> )</li>
-    <li><a href="https://mariadb.com/docs/server/ref/cs10.3/"
-       class="uri">https://mariadb.com/docs/server/ref/cs10.3/</a></li>
+    <li><a href=
+    "https://opensource.com/article/20/10/mariadb-mysql-linux">https://opensource.com/article/20/10/mariadb-mysql-linux</a>
+    (alt: <a href="https://archive.ph/yhDHm">https://archive.ph/yhDHm</a>
+    )</li>
+    <li><a href=
+    "https://mariadb.com/docs/server/ref/cs10.3/">https://mariadb.com/docs/server/ref/cs10.3/</a></li>
   </ul>
   <p>The first one is a good source for quickly getting going. Depending on
   your distribution, you may need to do things a bit differently.</p>
@@ -401,32 +494,33 @@ bib style-save     # Run this if you change bibliography &gt; Entries
       and try again.</p>
     </li>
     <li>
-      <p>Var: **cgDirBackup="backup"**</p>
+      <p>Var: <strong><strong>cgDirBackup="backup"</strong></strong></p>
       <p>This is the directory name (or path) where backup files are put. "~"
       numbers will be put after duplicate backups. With no "/" at the
       beginning, the name will be relative to $PWD.</p>
     </li>
     <li>
-      <p>Var: **cgDirConf="$HOME/.config/libre-bib"**</p>
+      <p>Var:
+      <strong><strong>cgDirConf="$HOME/.config/libre-bib"</strong></strong></p>
       <p>Config files that are common for your user can be put here. If you
       have multiple bib directories, then this will be useful. This should be
       an absolute path.</p>
     </li>
     <li>
-      <p>Var: **cgDirEtc="etc"**</p>
+      <p>Var: <strong><strong>cgDirEtc="etc"</strong></strong></p>
       <p>Templates and other doc related files are put here. Initially they
       are copied from <em>opt/libre-bib/etc</em>. The files are copied to
       cgDirBackup if a command would change any of the files.</p>
     </li>
     <li>
       <p>Var:
-      **cgDirLibreofficeConf="$HOME/.config/libreoffice/4/user/database/biblio"**</p>
+      <strong><strong>cgDirLibreofficeConf="$HOME/.config/libreoffice/4/user/database/biblio"</strong></strong></p>
       <p>This is the location of Libreoffice's bibliography DB connection
       information. The path might need to be changed for different
       Libreoffice varsions.</p>
     </li>
     <li>
-      <p>Var: **cgDirStatus="status"**</p>
+      <p>Var: <strong><strong>cgDirStatus="status"</strong></strong></p>
       <p>When a command updates a file, a date-stamped status file is created
       in the cgDirStatus directory. If a dependent file has a newer time than
       it's corresponding status file, then the update command will be
@@ -436,7 +530,7 @@ bib style-save     # Run this if you change bibliography &gt; Entries
       newer.</p>
     </li>
     <li>
-      <p>Var: **cgDirTmp="tmp"**</p>
+      <p>Var: <strong><strong>cgDirTmp="tmp"</strong></strong></p>
       <p>Temporary working files are put in this dir. This is usually
       relative to $PWD. If set to an absolute location, be sure there is
       space and that it is unique across all users and bib processes that
@@ -449,32 +543,34 @@ bib style-save     # Run this if you change bibliography &gt; Entries
       kept. This can be set to 2 to 100.</p>
     </li>
     <li>
-      <p>Var: **cgDbHost="127.0.0.1"**</p>
+      <p>Var: <strong><strong>cgDbHost="127.0.0.1"</strong></strong></p>
       <p>Usually this will always be set to the localhost IP. That works
       better than using a name or localhost.</p>
     </li>
     <li>
-      <p>Var: **cgDbName="biblio<sub>example</sub>"**</p>
+      <p>Var:
+      <strong><strong>cgDbName="biblio<sub>example</sub>"</strong></strong></p>
       <p>This is the name of the database.</p>
     </li>
     <li>
-      <p>Var: **cgDbUser="$USER"**</p>
+      <p>Var: <strong><strong>cgDbUser="$USER"</strong></strong></p>
       <p>This is the name of your DB user. Typically it is the same as your
       login user name, but you can used any name.</p>
     </li>
     <li>
-      <p>Var: **cgDbPassHint="b4n"**</p>
+      <p>Var: <strong><strong>cgDbPassHint="b4n"</strong></strong></p>
       <p>This will be shown when you are prompted for the DB User's
       password.</p>
     </li>
     <li>
-      <p>Var: **cgDbPassCache="$cgDirTmp/.pass.tmp"**</p>
+      <p>Var:
+      <strong><strong>cgDbPassCache="$cgDirTmp/.pass.tmp"</strong></strong></p>
       <p>When you use commands that need to connect to the DB you will be
       prompted for the user's DB password. It will be saved here. It is not
       encrypted, so don't use the DB User/Pass for sensitive DBs.</p>
     </li>
     <li>
-      <p>Var: **cgDbPortLocal="3306"**</p>
+      <p>Var: <strong><strong>cgDbPortLocal="3306"</strong></strong></p>
       <p>This is the port for the DB, on the system where the DB is
       running.</p>
     </li>
@@ -484,33 +580,35 @@ bib style-save     # Run this if you change bibliography &gt; Entries
       the ssh setup section for the details on setting up the tunnel.</p>
     </li>
     <li>
-      <p>Var: **cgDbHostRemote="NAME.example.com"**</p>
+      <p>Var:
+      <strong><strong>cgDbHostRemote="NAME.example.com"</strong></strong></p>
       <p>If you are using a DB on another system, then define that system's
       name here.</p>
     </li>
     <li>
-      <p>Var: **cgDbPortRemote="3308"**</p>
+      <p>Var: <strong><strong>cgDbPortRemote="3308"</strong></strong></p>
       <p>This will be the port for the DB tunnel. It can be most any unused
       port number.</p>
     </li>
     <li>
-      <p>Var: **cgSshUser="$USER"**</p>
+      <p>Var: <strong><strong>cgSshUser="$USER"</strong></strong></p>
       <p>This is your user name on the remote system.</p>
     </li>
     <li>
-      <p>Var: **cgSshKey="$HOME/.ssh/id.KEY-NAME"**</p>
+      <p>Var:
+      <strong><strong>cgSshKey="$HOME/.ssh/id.KEY-NAME"</strong></strong></p>
       <p>This is the ssh key name for accessing the remote system. This will
       be used to define the config file for setting up the ssh tunnel.</p>
     </li>
     <li>
-      <p>Var: **cgDocFile="example.odt"**</p>
+      <p>Var: <strong><strong>cgDocFile="example.odt"</strong></strong></p>
       <p>This it the whole reason for this app and hopefully this shows why
       you went through the work of creating the biblio.txt file.</p>
       <p>This is your Libreoffice document file that contains bibliographic
       references. <cite>{REFs}</cite></p>
     </li>
     <li>
-      <p>Var: **cgLoFile="biblio.txt"**</p>
+      <p>Var: <strong><strong>cgLoFile="biblio.txt"</strong></strong></p>
       <p>This is the text file you will use for adding and updating
       bibliographic entries. This is much easier to manage and backup than
       using the DB for everything.</p>
@@ -518,28 +616,29 @@ bib style-save     # Run this if you change bibliography &gt; Entries
       most. biblio.txt is where you will be putting most of the bibliographic
       information about a book, article, web page, video, etc.</p>
       <p>If you have setup a LibraryThing DB (see: <a href=
-      "https://www.librarything.com/home"
-         class="uri">https://www.librarything.com/home</a>) you can export a
-         tsv file of your LibraryThing DB to librarything.tsv. Then you can
-         run "bib update-lo" to update empty "lo" table fields from the "lib"
-         DB table. See the "LibraryThing" section for more details.</p>
+      "https://www.librarything.com/home">https://www.librarything.com/home</a>)
+      you can export a tsv file of your LibraryThing DB to librarything.tsv.
+      Then you can run "bib update-lo" to update empty "lo" table fields from
+      the "lib" DB table. See the "LibraryThing" section for more
+      details.</p>
       <p>The key.txt file just gives some quick tip on the kind of values you
       can put after the Tags. It isn't used anywhere else, so you can edit or
       delete the file.</p>
     </li>
     <li>
-      <p>Var: **cgDbLo="lo"**</p>
+      <p>Var: <strong><strong>cgDbLo="lo"</strong></strong></p>
       <p>This is the name of the primary LibreOffice bibliographic DB
       table.</p>
     </li>
     <li>
-      <p>Var: **cgDbBib="bib"**</p>
+      <p>Var: <strong><strong>cgDbBib="bib"</strong></strong></p>
       <p>When the lo table is updated this table is created to do some simple
       formatting, so the bibliography will not be cluttered with duplicate
       commas when there are empty values.</p>
     </li>
     <li>
-      <p>Var: **cgBackupFile="$cgDirBackup/backup-lo.csv"**</p>
+      <p>Var:
+      <strong><strong>cgBackupFile="$cgDirBackup/backup-lo.csv"</strong></strong></p>
       <p>If you run the backup-lo command this is where the backup will be
       put. If there is already one there, then that will be backed up.</p>
     </li>
@@ -548,15 +647,15 @@ bib style-save     # Run this if you change bibliography &gt; Entries
       <p>Set this to "true" if you will be using a Library Thing export.</p>
     </li>
     <li>
-      <p>Var: **cgLibFile="librarything.tsv"**</p>
+      <p>Var:
+      <strong><strong>cgLibFile="librarything.tsv"</strong></strong></p>
       <p>This is the name of the tsv (Tab Separated Value) file that was
       exported from Library Thing.</p>
       <p>Using LibraryThing export your DB to librarything.tsv file <a href=
-      "https://www.librarything.com/home"
-         class="uri">https://www.librarything.com/home</a></p>
+      "https://www.librarything.com/home">https://www.librarything.com/home</a></p>
     </li>
     <li>
-      <p>Var: **cgDbLib="lib"**</p>
+      <p>Var: <strong><strong>cgDbLib="lib"</strong></strong></p>
       <p>This is the name of the LibraryThing table that will be created from
       cgLibFile.</p>
     </li>
@@ -663,9 +762,9 @@ bib style-save     # Run this if you change bibliography &gt; Entries
       backup tables or files.</p>
     </li>
     <li>
-      <p>To restore a table. In mysql, follow this example:</p>drop table
-      `bib`; RENAME TABLE `bib<sub>2023</sub>-04-02<sub>14</sub>-18-37` TO
-      bib;
+      <p>To restore a table. In mysql, follow this example:</p>
+      <p>drop table `bib`; RENAME TABLE
+      `bib<sub>2023</sub>-04-02<sub>14</sub>-18-37` TO bib;</p>
     </li>
   </ul>
   <hr />
@@ -947,13 +1046,12 @@ Done. [396]
   <hr />
   <h2 id="g.-support">G. Support</h2>
   <ul>
-    <li>Project Home: <a href="https://github.com/TurtleEngr/libre-bib"
-       class="uri">https://github.com/TurtleEngr/libre-bib</a></li>
+    <li>Project Home: <a href=
+    "https://github.com/TurtleEngr/libre-bib">https://github.com/TurtleEngr/libre-bib</a></li>
     <li>Stable version is on the "main" branch.</li>
     <li>Latest version is on the default "develop" branch.</li>
     <li>File defects and enhancements at <a href=
-    "https://github.com/TurtleEngr/libre-bib/issues"
-       class="uri">https://github.com/TurtleEngr/libre-bib/issues</a></li>
+    "https://github.com/TurtleEngr/libre-bib/issues">https://github.com/TurtleEngr/libre-bib/issues</a></li>
   </ul>
 </body>
 </html>

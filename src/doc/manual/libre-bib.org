@@ -10,6 +10,58 @@
 <body>
 #+END_EXPORT
 * Libre Bib Manual
+** TOC
++ <a href="#install-and-setup">Install and Setup</a>
+  + <a href="#o.s.-requirments">O.S. Requirments</a>
+  + <a href="#install-package">Install Package</a>
+    + <a href="#required-packages">Required Packages</a>
+    + <a href="#optional-packages">Optional Packages</a>
+    + <a href="#required-packages-for-building">Required Packages for Building</a>
+    + <a href="#config">Config</a>
+  + <a href="#setup-libre-bib-project">Setup libre-bib project</a>
+  + <a href="#configure-the-db">Configure the DB</a>
+    + <a href="#install-and-test">Install and test</a>
+    + <a href="#create-db-users-and-grants">Create DB, Users, and Grants</a>
+  + <a href="#configure-ssh">Configure ssh</a>
+    + <a href="#test-the-tunnel">Test the tunnel</a>
++ <a href="#using-libre-bib">Using libre-bib</a>
+  + <a href="#quick-start">Quick Start</a>
+  + <a href="#libre-bib-tour">libre-bib Tour</a>
+    + <a href="#files-and-dirs">Files and Dirs</a>
+    + <a href="#db-tables">DB Tables</a>
+    + <a href="#annotated-conf.env">Annotated conf.env</a>
+  + <a href="#commands">Commands</a>
+    + <a href="#cmd-setup-bib">Cmd: setup-bib</a>
+    + <a href="#cmd-connect">Cmd: connect</a>
+    + <a href="#cmd-check">Cmd: check</a>
+    + <a href="#cmd-edit">Cmd: edit</a>
+    + <a href="#cmd-import-lo">Cmd: import-lo</a>
+    + <a href="#cmd-export-lo">Cmd: export-lo</a>
+    + <a href="#cmd-backup-lo">Cmd: backup-lo</a>
+    + <a href="#cmd-import-lib">Cmd: import-lib</a>
+    + <a href="#cmd-update-lo">Cmd: update-lo</a>
+    + <a href="#cmd-ref-new">Cmd: ref-new</a>
+    + <a href="#cmd-ref-update">Cmd: ref-update</a>
+    + <a href="#cmd-save-style">Cmd: save-style</a>
+    + <a href="#cmd-update-style">Cmd: update-style</a>
+    + <a href="#cmd-status">Cmd: status</a>
+    + <a href="#cmd-clean">Cmd: clean</a>
+    + <a href="#cmd-version">Cmd: version</a>
+    + <a href="#cmd-add-edit">Cmd: add, edit</a>
+    + <a href="#cmd-help">Cmd: help</a>
++ <a href="#appendix">Appendix</a>
+  + <a href="#a.-backups">A. Backups</a>
+  + <a href="#b.-customizing-the-defaults">B. Customizing the defaults</a>
+  + <a href="#c.-emacs-org-mode---outine">C. Emacs Org Mode - Outine</a>
+  + <a href="#d.-full-example">D. Full Example</a>
+  + <a href="#e.-build">E. Build</a>
+  + <a href="#f.-maps">F. Maps</a>
+    + <a href="#bib-to-libreoffice-names">bib to libreoffice names</a>
+    + <a href="#lo-file-to-lo-table">lo-file to lo-table</a>
+    + <a href="#lo-table-to-bib-table">lo-table to bib-table</a>
+    + <a href="#lib-table-to-lo-table">lib-table to lo-table</a>
+  + <a href="#g.-support">G. Support</a>
+
 * Install and Setup
 ** O.S. Requirments
 
