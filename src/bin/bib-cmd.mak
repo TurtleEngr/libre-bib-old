@@ -10,7 +10,7 @@ SHELL = /bin/bash
 
 mConfigDB = ~/.config/libreoffice/4/user/database
 
-mDate = $$(date +%F_%T)
+mDate = $$('date' +%F_%T)
 
 mTidyXhtml = tidy -m -q -i -w 78 -asxhtml --break-before-br yes --indent-attributes yes --indent-spaces 2 --tidy-mark no --vertical-space no
 
